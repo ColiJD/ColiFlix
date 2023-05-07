@@ -1,0 +1,9 @@
+.catalogo{
+    margin: 0 3rem;
+}
+
+.videoAdd{
+    margin-top: 0.75rem;
+    display: flex;
+    flex-wrap: wrap;
+}

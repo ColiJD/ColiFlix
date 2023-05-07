@@ -1,0 +1,17 @@
+.ListaCampo label{
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.ListaCampo select{
+    width: 100%;
+    background-color: #53585D;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+    padding: 10px 20px;;
+    border: none;
+    outline-color: #6278F7 ;
+    font-size: 16px;
+    color: #fff;
+}
+

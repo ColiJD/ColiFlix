@@ -1,0 +1,17 @@
+@import url("../../assets/base/_variables.css");
+.boton {
+    background-color: var(--primary-color);
+    font-weight: 700;
+    font-family: var(--font-family-logo);
+    padding: 8px 24px;
+    border: none;
+    color: var(--contrast-light-color);
+    cursor: pointer;
+    border: solid 1px #fff;
+
+}
+
+.boton:hover {
+    background-color: var(--cor-categoria-comportamiento);
+    color: var(--cor-categoria-bienestar);
+}

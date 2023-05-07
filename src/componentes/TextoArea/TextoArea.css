@@ -1,0 +1,34 @@
+.campoText {
+   
+    margin: 24px 0;
+}
+
+.campoText label {
+    font-weight: 600;
+    font-size: 18px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.campoText textarea {
+    font-family: "Roboto";
+    width: 100%;
+    height: 150px;
+    background-color: #53585D;
+    border: none;
+    padding: 10px 20px;
+    outline-color: #6278F7;
+    font-size: 16px;
+    box-sizing: border-box;
+    color: #fff;
+    
+}
+
+.campoText textarea::placeholder{
+    color: #fff;
+}
+
+.campo-color textarea {
+    height: 40px;
+    padding: 5px 20px;
+}
