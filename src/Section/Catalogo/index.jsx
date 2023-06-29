@@ -1,19 +1,33 @@
-import './Catalogo.css';
-import Videos from "../../componentes/VideosAdd";
-import Boton from '../../componentes/Boton';
+import { useState, useEffect } from 'react';
+import React from 'react';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+import { StyledCatalogo,  responsive} from './StyledCatalogo';
+import { buscar } from '../../api/api';
+import Indice from '../../componentes/Indice';
+import PostArrys from '../../componentes/Posts';
 
-const Catalogo = (prosp) => {
-    const { titulo, colorPrimario } = prosp.datos;
 
+const Catalogo = (props) => {
+    const [posts, setPosts] = useState([])
+    const { nombre } = props.datosCate
+
+    useEffect(() => {
+        buscar("/videos", setPosts)
+    }, [])
     return (
-        <section className="catalogo">
-            <Boton texto={titulo} colorPrimario="#000" colorSecundario={colorPrimario} font="24px" margen="0.75rem 0 0 0" />
-            <div className="videoAdd">
-                <Videos />
+        <StyledCatalogo>
+            <Indice nombre={nombre} />
+            <Carousel responsive={responsive}  >
+                {
+                    posts.map(post => {
+                        return <PostArrys datosPost={post} key={post.id}/>
+                    })}
+            </Carousel>
 
-            </div>
-        </section>
+        </StyledCatalogo>
     )
 };
+
 
 export default Catalogo

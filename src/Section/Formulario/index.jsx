@@ -1,9 +1,54 @@
+import React from "react";
+import styled from "styled-components";
 import { useState } from "react";
-import "./Formulario.css";
 import Campo from "../../componentes/Campo";
-import Boton from "../../componentes/Boton";
 import ListaCampo from "../../componentes/ListaCampo";
 import TextoArea from "../../componentes/TextoArea";
+import { blanco } from "../../assets/base/Variables";
+import { TitulosPrincipales, Button } from "../../assets/base";
+
+const StyledFormulario = styled.section`
+    display: flex;
+    justify-content: center;
+    flex-wrap:  wrap;
+    gap: 20px;
+    color: ${blanco};
+    background-color: #000;
+
+    @media screen and (max-width:480px){
+        margin: 0;
+    }
+`
+const StyledForm = styled.form`
+    box-shadow: 7px 7px 15px rgba(0, 0, 0, 25%);
+    border-radius: 20px;
+    padding: 8px 100px;
+    flex: 1;
+
+    @media screen and (max-width:480px){
+        box-shadow: none;
+        padding: 8px 5px;
+    }
+`
+const StyledDiv = styled.div`
+    display: flex;
+    justify-content: space-between;
+`
+const StyDivBotones = styled.div`
+   *:first-child {
+    margin-right: 2rem;
+    }
+    @media screen and (max-width:720px){
+       *:first-child {
+    margin-right: 0.75rem;
+    margin-bottom: 0.75rem;
+        }
+    }
+`
+const StyledBoton = styled(Button)`
+    background-color: gray;
+    color: black;
+`
 
 
 const Formulario = (props) => {
@@ -27,23 +72,25 @@ const Formulario = (props) => {
     }
 
     return (
-        <section className="formulario">
-            <form onSubmit={manejarEnvio}>
-                <h2 >Nuevo Video</h2>
+        <StyledFormulario className="formulario">
+            <StyledForm onSubmit={manejarEnvio}>
+                <TitulosPrincipales >Nuevo Video</TitulosPrincipales>
                 <Campo placeholder="Titulo" required valor={titulo} setValor={setTitulo} />
                 <Campo placeholder="Link del video" required valor={linkVideo} setValor={setlinkVideo} />
                 <Campo placeholder="Link de imagen del video" required valor={linkImagen} setValor={setLinkimage} />
                 <ListaCampo required valor={categoria} setValor={setCategoria} />
                 <TextoArea placeholder="Descripcion" required valor={descripcion} setValor={setDescripcion} />
-                <div className="formulario-button">
-                    <Boton texto="Guardar" />
-                    <Boton texto="Limpiar" colorSecundario="#9E9E9E" colorPrimario="#000" />
-                    <Boton texto="Nueva Categoria" />
-                </div>
-
-
-            </form>
-        </section>
+                <StyledDiv>
+                    <StyDivBotones>
+                        <Button>Guardar</Button>
+                        <Button>Limpiar</Button>
+                    </StyDivBotones>
+                    <div>
+                        <StyledBoton>Nueva Categoria</StyledBoton>
+                    </div>
+                </StyledDiv>
+            </StyledForm>
+        </StyledFormulario>
     )
 }
 export default Formulario;

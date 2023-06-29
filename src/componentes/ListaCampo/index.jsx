@@ -1,4 +1,5 @@
-import "./ListaCampo.css"
+import React from "react";
+import {ListaStyled} from "../../assets/base/index"
 
 const ListaCampo = (props) => {
 
@@ -14,15 +15,15 @@ const ListaCampo = (props) => {
     const manejarCambios = (e) => {
         props.setValor(e.target.value)
     }
-    return <section className="ListaCampo">
-        {/*<label>Catalogo</label>*/}
-        <select value={props.valor} onChange={manejarCambios} >
+    return <div className="ListaCampo">
+        {/*<LabelStyled>Catalogo</LabelStyled>*/}
+        <ListaStyled value={props.valor} onChange={manejarCambios} >
             <option value="" disabled defaultValue="" hidden>Categoria</option>
             {categoria.map((categoria, index) => {
                 return <option key={index} value={categoria}>{categoria}</option>
             })}
-        </select>
-    </section>
+        </ListaStyled>
+    </div>
 };
 
 export default ListaCampo;

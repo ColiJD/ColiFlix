@@ -1,4 +1,6 @@
-import "./TextoArea.css";
+import React from "react"
+import {CampoStyled, LabelStyled,TextAreaStyled} from "../../assets/base"
+
 
 const TextoArea = (props) => {
     const { type = 'text', placeholder, requiered, valor, setValor} = props
@@ -7,16 +9,16 @@ const TextoArea = (props) => {
     const manejarCambio = (e) => {
         setValor(e.target.value)
     }
-    return <div className="campoText">
-    <label>{props.titulo}</label>
-        <textarea 
+    return <CampoStyled className="campoText">
+    <LabelStyled>{props.titulo}</LabelStyled>
+        <TextAreaStyled 
             placeholder={placehlderModificador}
             requiered={requiered}
             value={valor}
             onChange={manejarCambio}
             type={type} >
-        </textarea>
-    </div>
+        </TextAreaStyled>
+    </CampoStyled>
 }
 
 export default TextoArea

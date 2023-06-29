@@ -1,0 +1,78 @@
+{
+  "categorias": [
+    {
+      "id": "anime",
+      "nombre": "Anime"
+    },
+    {
+      "id": "doramas",
+      "nombre": "Doramas"
+    },
+    {
+      "id": "peliculas",
+      "nombre": "Peliculas"
+    },
+    {
+      "id": "series",
+      "nombre": "Series"
+    },
+    {
+      "id": "videos",
+      "nombre": "Videos Musicales"
+    },
+    {
+      "id": "otras",
+      "nombre": "Otras"
+    }
+  ],
+  "videos": [
+    {
+      "id": 1,
+      "titulo": "Título del video 1",
+      "linkVideo": "https://www.youtube.com/watch?v=123456",
+      "linkImagen": "https://colijd.github.io/imagenes/imagen/atack.jpg",
+      "categorias": "anime",
+      "descripcion": "Descripción del video 1"
+    },
+    {
+      "id": 2,
+      "titulo": "Título del video 2",
+      "linkVideo": "https://www.youtube.com/watch?v=789012",
+      "linkImagen": "https://colijd.github.io/imagenes/imagen/boku.jpg",
+      "categorias": "anime",
+      "descripcion": "Descripción del video 2"
+    },
+    {
+      "id": 3,
+      "titulo": "Título del video 3",
+      "linkVideo": "https://www.youtube.com/watch?v=345678",
+      "linkImagen": "https://colijd.github.io/imagenes/imagen/full.jpg",
+      "categorias": "anime",
+      "descripcion": "Descripción del video 3"
+    },
+    {
+      "id": 4,
+      "titulo": "Título del video 1",
+      "linkVideo": "https://www.youtube.com/watch?v=123456",
+      "linkImagen": "https://colijd.github.io/imagenes/imagen/londra.jpg",
+      "categorias": "doramas",
+      "descripcion": "Descripción del video 1"
+    },
+    {
+      "id": 5,
+      "titulo": "Título del video 2",
+      "linkVideo": "https://www.youtube.com/watch?v=789012",
+      "linkImagen": "https://colijd.github.io/imagenes/imagen/boku.jpg",
+      "categorias": "peliculas",
+      "descripcion": "Descripción del video 2"
+    },
+    {
+      "id": 6,
+      "titulo": "Título del video 3",
+      "linkVideo": "https://www.youtube.com/watch?v=345678",
+      "linkImagen": "https://colijd.github.io/imagenes/imagen/one.jpg",
+      "categorias": "peliculas",
+      "descripcion": "Descripción del video 3"
+    }
+  ]
+}
