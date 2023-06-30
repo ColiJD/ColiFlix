@@ -8,23 +8,21 @@ import PostArrys from '../../componentes/Posts';
 
 
 const Catalogo = (props) => {
-
-    const { nombre } = props.datosCate
-    const { FiltarPosts } = props
-    return (
-        <StyledCatalogo>
-            <Indice nombre={nombre} />
-            <Carousel responsive={responsive}  >
-                {
-                    FiltarPosts.map((post, index) => <PostArrys
-                        datos={post}
-                        key={index}
-                    />)
-                }
-            </Carousel>
-
-        </StyledCatalogo>
-    )
+  const { nombre } = props.datosCate
+  const { FiltarPosts } = props
+  return <>{FiltarPosts.length > 0 &&
+    <StyledCatalogo>
+      <Indice nombre={nombre} />
+      <Carousel responsive={responsive}  >
+        {
+          FiltarPosts.map((post, index) => <PostArrys
+            datos={post}
+            key={index}
+          />)
+        }
+      </Carousel>
+    </StyledCatalogo>}
+  </>
 };
 
 
