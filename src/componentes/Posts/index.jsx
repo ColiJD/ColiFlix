@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 
 
 const PostArrys = (props) => {
-    const { id, titulo, linkImagen, descripcion } = props.datosPost;
+    const { id, titulo, linkImagen, descripcion } = props.datos;
 
     return <div>
         <Link to={`/videos/${id}`} key={id} >

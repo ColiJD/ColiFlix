@@ -1,28 +1,26 @@
-import { useState, useEffect } from 'react';
+
 import React from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import { StyledCatalogo,  responsive} from './StyledCatalogo';
-import { buscar } from '../../api/api';
+import { StyledCatalogo, responsive } from './StyledCatalogo';
 import Indice from '../../componentes/Indice';
 import PostArrys from '../../componentes/Posts';
 
 
 const Catalogo = (props) => {
-    const [posts, setPosts] = useState([])
-    const { nombre } = props.datosCate
 
-    useEffect(() => {
-        buscar("/videos", setPosts)
-    }, [])
+    const { nombre } = props.datosCate
+    const { FiltarPosts } = props
     return (
         <StyledCatalogo>
             <Indice nombre={nombre} />
             <Carousel responsive={responsive}  >
                 {
-                    posts.map(post => {
-                        return <PostArrys datosPost={post} key={post.id}/>
-                    })}
+                    FiltarPosts.map((post, index) => <PostArrys
+                        datos={post}
+                        key={index}
+                    />)
+                }
             </Carousel>
 
         </StyledCatalogo>

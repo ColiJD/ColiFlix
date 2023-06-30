@@ -13,6 +13,7 @@ import { buscar } from '../api/api';
 function Home() {
     const [mostrarFormulario, actualizarMostrar] = useState(false);
     const [categories, setCategories] = useState([]);
+    const [posts, setPosts] = useState([])
 
 
     const cambiarMostrar = () => {
@@ -22,7 +23,9 @@ function Home() {
     useEffect(() => {
         buscar(`/categorias`, setCategories)
     }, [])
-
+    useEffect(() => {
+        buscar("/videos", setPosts)
+    }, [])
     // const registrarPosts = (post) => {
     //     //Spread operator //Esto crea una copia los tres puntos
     //     actualizarPosts([...posts, post])
@@ -36,8 +39,25 @@ function Home() {
                 <Banner />
                 <main>
                     {categories.map((categoria) => {
-                        return <Catalogo datosCate={categoria} key={categoria.id}
-                        />
+                        return (
+                            <Catalogo
+                                datosCate={categoria}
+                                key={categoria.id}
+                                FiltarPosts={posts
+                                    .map((post) => {
+                                        const id = post.id;
+                                        const titulo = post.titulo;
+                                        const linkVideo = post.linkVideo;
+                                        const linkImagen = post.linkImagen;
+                                        const categorias = post.categorias;
+                                        const descripcion = post.descripcion;
+                                        return { id, titulo, linkVideo, linkImagen, categorias, descripcion };
+                                    })
+                                    .filter((post) => {
+                                        return post.categorias === categoria.id;
+                                    })}
+                            />
+                        );
                     })}
                 </main>
                 <Footer />
