@@ -1,6 +1,6 @@
 
 import React from "react"
-import { StyledDivContent, StyledImagenes } from "../../Section/Catalogo/StyledCatalogo"
+import { StyledDivContent, StyledImagenes } from "../../Section/Categoria/StyledCategoria"
 import { Link } from "react-router-dom"
 
 

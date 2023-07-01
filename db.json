@@ -17,20 +17,44 @@
       "nombre": "Series"
     },
     {
-      "id": "videos",
+      "id": "vmusicales",
       "nombre": "Videos Musicales"
     },
     {
       "id": "otras",
       "nombre": "Otras"
+    },
+    {
+      "id": "rock",
+      "nombre": "Rock"
+    },
+    {
+      "id": "hentai",
+      "nombre": "Hentai"
+    },
+    {
+      "id": "pop",
+      "nombre": "Pop"
+    },
+    {
+      "id": "jazz",
+      "nombre": "Jazz"
+    },
+    {
+      "id": "electro",
+      "nombre": "Electro"
+    },
+    {
+      "id": "shonen",
+      "nombre": "Shonen"
     }
   ],
   "videos": [
     {
       "id": 1,
       "titulo": "Título del video 1",
-      "linkVideo": "https://www.youtube.com/watch?v=123456",
-      "linkImagen": "https://colijd.github.io/imagenes/imagen/megumin.jpg",
+      "linkVideo": "https://firebasestorage.googleapis.com/v0/b/react-firebase-9385b.appspot.com/o/59478288-1ca4-498c-a0b2-9d1a8a6471c1?alt=media&token=72cd914e-e733-4789-9167-66ae6268ea46",
+      "linkImagen": "https://firebasestorage.googleapis.com/v0/b/react-firebase-9385b.appspot.com/o/49ffa4e6-41cf-4b66-8e51-41cf7262f31a?alt=media&token=9d015f24-c810-4fc7-99a0-af340b883d6b",
       "categorias": "anime",
       "descripcion": "Descripción del video 1"
     },
@@ -73,6 +97,30 @@
       "linkImagen": "https://colijd.github.io/imagenes/imagen/one.jpg",
       "categorias": "peliculas",
       "descripcion": "Descripción del video 3"
+    },
+    {
+      "id": "09a3d150-dc15-4821-8f48-673fe5ec4798",
+      "titulo": "boku",
+      "linkVideo": "https://firebasestorage.googleapis.com/v0/b/react-firebase-9385b.appspot.com/o/59478288-1ca4-498c-a0b2-9d1a8a6471c1?alt=media&token=72cd914e-e733-4789-9167-66ae6268ea46",
+      "linkImagen": "https://firebasestorage.googleapis.com/v0/b/react-firebase-9385b.appspot.com/o/4f46d3e9-11fe-4b2c-b596-952201c89643?alt=media&token=b20c61dc-f2b5-46bd-8409-bf6198fe19cb",
+      "descripcion": "Boku",
+      "categorias": "doramas"
+    },
+    {
+      "id": "303ba073-bc65-43e0-b410-caa1cc591e92",
+      "titulo": "Heroes",
+      "linkVideo": "https://firebasestorage.googleapis.com/v0/b/react-firebase-9385b.appspot.com/o/59478288-1ca4-498c-a0b2-9d1a8a6471c1?alt=media&token=72cd914e-e733-4789-9167-66ae6268ea46",
+      "linkImagen": "https://firebasestorage.googleapis.com/v0/b/react-firebase-9385b.appspot.com/o/d733ff7f-de2b-4473-bb14-e9fd4b03b0a3?alt=media&token=ddd8c8ea-686a-471b-acd3-76efc8076299",
+      "descripcion": "Heror",
+      "categorias": "vmusicales"
+    },
+    {
+      "id": "eeb0101e-2dbc-4176-8577-43b466fe880c",
+      "titulo": "Video de Heroes",
+      "linkVideo": "https://firebasestorage.googleapis.com/v0/b/react-firebase-9385b.appspot.com/o/59478288-1ca4-498c-a0b2-9d1a8a6471c1?alt=media&token=72cd914e-e733-4789-9167-66ae6268ea46",
+      "linkImagen": "https://firebasestorage.googleapis.com/v0/b/react-firebase-9385b.appspot.com/o/8147b6f2-9a47-461d-9bce-475c111e8520?alt=media&token=38e16a22-6a2d-4c18-a47a-3a4f6c22ee6e",
+      "descripcion": "Veremos ",
+      "categorias": "otras"
     }
   ]
 }

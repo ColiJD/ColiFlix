@@ -16,8 +16,13 @@ const StyledHeader = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.75rem 2rem;
+    padding: 0.75rem 4rem;
     border-bottom: 2px solid ${primary};
+
+    @media screen and (max-width:480px) {
+      padding: 0.75rem 2rem;
+      
+    }
 `
 
 

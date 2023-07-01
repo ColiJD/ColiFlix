@@ -3,10 +3,14 @@ import styled from 'styled-components';
 
 
 export const StyledCatalogo = styled.section`
-    padding: 0 2.5rem;
+    padding: 0 4rem;
     margin: 0;
     box-sizing: border-box;
     background-color: #000;
+ @media screen and (max-width:480px){
+        padding: 0 2rem;
+    }
+    
 `
 export const StyledImagenes = styled.img`
     width: 320px;

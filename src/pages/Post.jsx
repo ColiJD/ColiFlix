@@ -27,7 +27,7 @@ const StyledTitle = styled.h3`
   font-weight: bold;
   display: block;
 `
-const StyledVideo = styled.img`
+const StyledVideo = styled.video`
   height: 414px;
   border-radius: 2rem;
 `
@@ -40,7 +40,7 @@ const StyledDescription = styled.p`
 const Post = () => {
 
   const [post, setPost] = useState({})
-  const { titulo, linkImagen, descripcion } = post
+  const { titulo,descripcion, linkVideo } = post
   const navigate = useNavigate()
   const { id } = useParams()
   useEffect(() => {
@@ -61,11 +61,9 @@ const Post = () => {
             <Button>Regresar</Button>
           </Link>
         </StyledDiv>
-        <StyledVideo src={linkImagen} alt="Imagen" />
+        <StyledVideo controls src={linkVideo} alt="Imagen" /> 
         <StyledDescription >{descripcion}</StyledDescription>
       </article>
-
-
     </StyledMain>
   </>
   )
