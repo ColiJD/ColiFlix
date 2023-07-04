@@ -20,7 +20,8 @@ const Formulario = (props) => {
   /*Nueva categoria*/
 
   const [mostrarNuevaCategoria, actualizarNuevaCategoria] = useState(false);
-  const cambiarMostrar = () => {
+  const cambiarMostrar = (e) => {
+    e.preventDefault();
     actualizarNuevaCategoria(!mostrarNuevaCategoria);
   }
 
@@ -50,7 +51,8 @@ const Formulario = (props) => {
     }
   }
 
-  const limpiarCampos = () => {
+  const limpiarCampos = (e) => {
+    e.preventDefault();
     setTitulo("");
     setlinkVideo("");
     setLinkimage("");
@@ -65,15 +67,15 @@ const Formulario = (props) => {
         <Campo placeholder="Titulo" required valor={titulo} setValor={setTitulo} />
         <Campo placeholder="Link del video" required valor={linkVideo} setValor={setlinkVideo} />
         <Campo placeholder="Link de imagen del video" required valor={linkImagen} setValor={setLinkimage} />
-        <ListaCampo required valor={categorias} setValor={setCategorias} setCategories={setCategories} categories={categories}/>
+        <ListaCampo required valor={categorias} setValor={setCategorias} setCategories={setCategories} categories={categories} />
         <TextoArea placeholder="Descripcion" valor={descripcion} setValor={setDescripcion} />
         <StyledDiv>
           <StyDivBotones>
             <Button onClick={manejarEnvio} >Guardar </Button>
-            <Button onClick={limpiarCampos}>Limpiar</Button>
+            <Button onClick={limpiarCampos} formNoValidate >Limpiar</Button>
           </StyDivBotones>
           <div>
-            <StyledBoton onClick={cambiarMostrar}>Nueva Categoria</StyledBoton>
+            <StyledBoton onClick={cambiarMostrar} formNoValidate >Nueva Categoria</StyledBoton>
           </div>
         </StyledDiv>
       </StyledForm>

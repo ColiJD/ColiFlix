@@ -23,30 +23,6 @@
     {
       "id": "otras",
       "nombre": "Otras"
-    },
-    {
-      "id": "rock",
-      "nombre": "Rock"
-    },
-    {
-      "id": "hentai",
-      "nombre": "Hentai"
-    },
-    {
-      "id": "pop",
-      "nombre": "Pop"
-    },
-    {
-      "id": "jazz",
-      "nombre": "Jazz"
-    },
-    {
-      "id": "electro",
-      "nombre": "Electro"
-    },
-    {
-      "id": "shonen",
-      "nombre": "Shonen"
     }
   ],
   "videos": [

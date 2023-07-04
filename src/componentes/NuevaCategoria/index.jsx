@@ -3,16 +3,18 @@ import styled from "styled-components";
 import { useState } from "react";
 import Campo from "../../componentes/Campo";
 import { TitulosPrincipales, Button } from "../../assets/base";
-import { StyDivBotones, StyledForm, StyledDiv } from "../../Section/Formulario/StyledFormulario";
-import { v4 } from "uuid";
+import { StyledForm, StyledDiv } from "../../Section/Formulario/StyledFormulario";
 
 const StyledFormC = styled(StyledForm)`
   padding-left: 0;
 `
+const StyledDi = styled(StyledDiv)`
+  padding: 0 2rem;
+`
 
 const NuevaCategoria = (props) => {
   const [nombre, setNombre] = useState("")
-  const {setCategories} = props;
+  const { setCategories } = props;
 
   const manejarEnvio = (e) => {
     e.preventDefault();
@@ -36,7 +38,28 @@ const NuevaCategoria = (props) => {
     }
   }
 
-  const limpiarCampos = () => {
+  const EliminarCategoria = (e) => {
+    e.preventDefault();
+    if (nombre === "") {
+      alert("Por favor, complete todos los campos antes de guardar.");
+      return;
+    } else {
+      let datos = {
+        id: nombre.toLowerCase(),
+      }
+      fetch(`http://localhost:5000/categorias/${datos.id}`, {
+        method: "Delete",
+      }).then((res) => {
+        alert("Se elimino con exito")
+        setCategories((prevCategories) => [...prevCategories, datos.id]);
+      }
+      ).catch((err) => console.log(err))
+    }
+  }
+
+
+  const limpiarCampos = (e) => {
+    e.preventDefault();
     setNombre("");
   };
 
@@ -44,12 +67,11 @@ const NuevaCategoria = (props) => {
     <StyledFormC >
       <TitulosPrincipales >Nueva Categoria</TitulosPrincipales>
       <Campo placeholder="Nueva Categoria" required valor={nombre} setValor={setNombre} />
-      <StyledDiv>
-        <StyDivBotones>
-          <Button onClick={manejarEnvio} >Guardar </Button>
-          <Button onClick={limpiarCampos}>Limpiar</Button>
-        </StyDivBotones>
-      </StyledDiv>
+      <StyledDi>
+        <Button onClick={manejarEnvio} >Guardar </Button>
+        <Button onClick={limpiarCampos} formNoValidate>Limpiar</Button>
+        <Button onClick={EliminarCategoria} formNoValidate>Eliminar</Button>
+      </StyledDi>
     </StyledFormC>
   )
 }
