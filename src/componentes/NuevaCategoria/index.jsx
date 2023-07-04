@@ -7,9 +7,27 @@ import { StyledForm, StyledDiv } from "../../Section/Formulario/StyledFormulario
 
 const StyledFormC = styled(StyledForm)`
   padding-left: 0;
+
+  @media screen and (max-width:768px){
+      padding: 8px 2rem;
+  }
+
+  @media screen and (max-width:480px){
+        box-shadow: none;
+        padding: 8px 5px;
+    }
 `
 const StyledDi = styled(StyledDiv)`
+  flex-wrap: wrap;
   padding: 0 2rem;
+
+  *:first-child {
+      margin-right: 0;
+        }
+`
+
+const StyledBoton = styled(Button)`
+  margin: 0.75rem 0;
 `
 
 const NuevaCategoria = (props) => {
@@ -68,9 +86,9 @@ const NuevaCategoria = (props) => {
       <TitulosPrincipales >Nueva Categoria</TitulosPrincipales>
       <Campo placeholder="Nueva Categoria" required valor={nombre} setValor={setNombre} />
       <StyledDi>
-        <Button onClick={manejarEnvio} >Guardar </Button>
-        <Button onClick={limpiarCampos} formNoValidate>Limpiar</Button>
-        <Button onClick={EliminarCategoria} formNoValidate>Eliminar</Button>
+        <StyledBoton onClick={manejarEnvio} >Guardar</StyledBoton>
+        <StyledBoton onClick={limpiarCampos} formNoValidate>Limpiar</StyledBoton>
+        <StyledBoton onClick={EliminarCategoria} formNoValidate>Eliminar</StyledBoton>
       </StyledDi>
     </StyledFormC>
   )
