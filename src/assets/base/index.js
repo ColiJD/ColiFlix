@@ -12,8 +12,8 @@ export const Button = styled.button`
     border: solid 1px #fff;
 
     &:hover {
-    background-color: ${blanco};
-    color: ${primary};
+    background-color: ${primary};
+    color: ${blanco};
     }
 `
 export const StyledNombre = styled.h1`

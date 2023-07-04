@@ -17,11 +17,11 @@ function Home() {
   }
 
   useEffect(() => {
-    buscar(`/categorias`, setCategories)
+    buscar(`https://json-server-361u.onrender.com/categorias`, setCategories)
   }, [])
 
   useEffect(() => {
-    buscar("/videos", setPosts)
+    buscar("https://json-server-361u.onrender.com/videos", setPosts)
   }, [])
 
   return (

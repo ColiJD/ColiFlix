@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+
 export const StyleCategorias = styled.ul`
     display: flex;
     flex-direction:column;
@@ -19,8 +20,7 @@ export const StyledLista = styled.li`
     list-style: none;
     text-decoration: none;
     &:hover {
-        background-color: #dadada;
-        color: #46bb42;
+        color: #FFE121;
     }
     
 `

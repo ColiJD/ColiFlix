@@ -26,7 +26,7 @@ const NuevaCategoria = (props) => {
         id: nombre.toLowerCase(),
         nombre,
       }
-      fetch("http://localhost:5000/categorias", {
+      fetch("https://json-server-361u.onrender.com/categorias", {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify(datos)
@@ -47,7 +47,7 @@ const NuevaCategoria = (props) => {
       let datos = {
         id: nombre.toLowerCase(),
       }
-      fetch(`http://localhost:5000/categorias/${datos.id}`, {
+      fetch(`https://json-server-361u.onrender.com/categorias/${datos.id}`, {
         method: "Delete",
       }).then((res) => {
         alert("Se elimino con exito")

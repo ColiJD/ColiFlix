@@ -37,9 +37,9 @@ const Formulario = (props) => {
         linkVideo,
         linkImagen,
         descripcion,
-        categorias
+        categorias: categorias.toLowerCase(),
       }
-      fetch("http://localhost:5000/videos", {
+      fetch("https://json-server-361u.onrender.com/videos", {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify(datos)
